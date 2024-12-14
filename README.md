@@ -65,4 +65,23 @@ To run this application, ensure you have the following installed:
 - Tests for recursive functions (consonant counting and prime checking).
 - Tests for methods in the UserCache class.
 
+### Screenshots
+**Homepage**
+![Homepage](screenshots/homepage.png)
+
+**Create user**
+![Create user](screenshots/create-user.png)
+
+**User Page**
+![User Page](screenshots/user-page.png)
+
+**Running Spring App**
+![Running Spring App](screenshots/running-spring-app.png)
+
+
+**Running Tests**
+![Running Tests](screenshots/running-tests.png)
+
+
+
 
