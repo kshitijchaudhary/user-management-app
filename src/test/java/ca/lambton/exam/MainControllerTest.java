@@ -20,7 +20,7 @@ class MainControllerTest {
     private Model model;
 
     @Mock
-    private BindingResult bindingResult;  // Mock BindingResult for validation
+    private BindingResult bindingResult;
 
     private MainController mainController;
 
@@ -46,7 +46,7 @@ class MainControllerTest {
     void testCreateUserForm() {
         // Verify that the GET /create mapping renders the correct view
         String viewName = mainController.createUserForm(model);
-        assertEquals("create", viewName);  // Correct form template should be rendered
+        assertEquals("create", viewName);
     }
 
     @Test
@@ -55,31 +55,31 @@ class MainControllerTest {
         User validUser = new User("John", 30, new Occupation("Engineer", 60000));
 
         // Mock the user addition (do nothing for void method)
-        doNothing().when(userCache).addUser(validUser);  // Mock the void method addUser
+        doNothing().when(userCache).addUser(validUser);
 
-        // Mocking BindingResult to return false for hasErrors (no errors)
+        // Mocking BindingResult to return false for hasErrors
         when(bindingResult.hasErrors()).thenReturn(false);
 
         // Call POST /create
         String viewName = mainController.createUser(validUser, bindingResult);
 
         // Assertions
-        assertEquals("redirect:/users", viewName);  // Should redirect to /users after successful creation
-        verify(userCache).addUser(validUser);  // Ensure the user was added
+        assertEquals("redirect:/users", viewName);
+        verify(userCache).addUser(validUser);
     }
 
     @Test
     void testCreateUserPostInvalid() {
-        // Simulate an invalid user submission (validation error)
+        // Simulate an invalid user submission
         User invalidUser = new User("A", 15, new Occupation("Intern", 1000));  // Invalid data
 
-        // Mocking BindingResult to return true for hasErrors (validation errors present)
+        // Mocking BindingResult to return true for hasErrors
         when(bindingResult.hasErrors()).thenReturn(true);
 
         // Call POST /create with invalid data
         String viewName = mainController.createUser(invalidUser, bindingResult);
 
         // Assertions
-        assertEquals("create", viewName);  // Should return the user form again due to validation errors
+        assertEquals("create", viewName);
     }
 }

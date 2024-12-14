@@ -13,7 +13,7 @@ class UserCacheTest {
 
     @BeforeEach
     void setUp() {
-        userCache = new UserCache();  // Assuming this initializes your UserCache with an empty list
+        userCache = new UserCache();
     }
 
     @Test

@@ -5,13 +5,13 @@ public class Occupation {
     private String title;
     private int salary;
 
-    // Constructor with parameters (to be used in the User constructor)
+    // Constructor with parameters
     public Occupation(String title, int salary) {
         this.title = title;
         this.salary = salary;
     }
 
-    // No-argument constructor (if needed for Spring or other purposes)
+    // No-argument constructor
     public Occupation() {
         // Initialize default values or leave empty
         this.title = "";

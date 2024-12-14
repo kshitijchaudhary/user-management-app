@@ -28,7 +28,7 @@ public class ExamApplication {
 	// Event listener to open the browser after Spring Boot application starts
 	@EventListener(ApplicationReadyEvent.class)
 	public void openBrowserAfterStartup() {
-		String url = "http://localhost:8080"; // URL to open after startup
+		String url = "http://localhost:8080";
 
 		// Try to open the default browser with the URL
 		if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
@@ -36,7 +36,7 @@ public class ExamApplication {
 				// Open the default browser
 				Desktop.getDesktop().browse(new URI(url));
 			} catch (IOException | URISyntaxException e) {
-				e.printStackTrace(); // Print the error if the browser cannot be opened
+				e.printStackTrace();
 			}
 		} else {
 			// Fallback in case Desktop class is not supported
@@ -45,7 +45,7 @@ public class ExamApplication {
 				// Try to open the URL using an OS-specific method
 				runtime.exec("rundll32 url.dll,FileProtocolHandler " + url);
 			} catch (IOException e) {
-				e.printStackTrace(); // Print the error if it fails to open the browser
+				e.printStackTrace();
 			}
 		}
 	}
