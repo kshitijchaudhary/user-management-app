@@ -26,7 +26,7 @@ To run this application, ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/user-management-app.git
+   git clone https://github.com/kshitijchaudhary/user-management-app.git
    cd user-management-app
    ```
 
