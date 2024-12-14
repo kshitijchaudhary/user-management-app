@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <link rel="stylesheet" href="/styles.css">
+
+    <script>
+        function refreshMostPaid() {
+            fetch('/mostpaid')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('most-paid').innerText = `Title: ${data.title}, Salary: ${data.salary}`;
+                });
+        }
+        setInterval(refreshMostPaid, 2000);
+    </script>
+</head>
+<body>
+<h1>Users</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Occupation</th>
+        <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+        <td th:text="${user.occupation.title}"></td>
+        <td th:text="${user.occupation.salary}"></td>
+    </tr>
+    </tbody>
+</table>
+<h2>Most Paid Occupation:</h2>
+<p id="most-paid">Loading...</p>
+<div class="text-center">
+    <!-- Back to Home button -->
+    <a href="/" class="btn btn-primary">Back to Home</a>
+</div>
+</body>
+</html>

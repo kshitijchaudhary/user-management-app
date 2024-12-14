@@ -1,0 +1,173 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #4CAF50;
+}
+
+/* Error Styling */
+div.th-errors {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* Button Alignment */
+button {
+    margin-top: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+/* Center the card container on the page */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+h1 {
+    color: #333; /* Dark text color */
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+
+/* Button Placement */
+button {
+    margin: 10px;
+    font-size: 1.1em;
+}
+
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Most Paid Occupation Section */
+#most-paid {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #4CAF50;
+}
